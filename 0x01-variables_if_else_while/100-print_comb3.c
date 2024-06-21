@@ -1,31 +1,30 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - Entry point
+ * main -Entry point
  *
- * Return: Always 0 (Success)
+ *Return: Always 0 (Success)
  */
+#include <stdio.h>
+
 int main(void)
 {
-	int i = 48;
-	int j;
-	int cal = 44;
-	int sp = 32;
+	int x;
+	int y;
 
-	for (; i <= 57; i++)
+	for (x = 0; x <= 9; x++)
 	{
-		j = i + 1;
-		for (; j <= 57; j++)
+		for (y = x + 1; y <= 9; y++)
 		{
-			putchar (i);
-			putchar (j);
-			if (i != 56 || (i == 56 && j != 57))
+			putchar(x + '0');
+			putchar(y + '0');
+			if (!(x == 8 && y == 9))
 			{
-				putchar (cal);
-				putchar (sp);
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
-	putchar ('\n');
+	putchar('\n');
 	return (0);
 }
