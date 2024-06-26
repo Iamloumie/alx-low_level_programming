@@ -17,7 +17,7 @@ int main(void)
 	for (i = 3; i <= 98; i++)
 	{
 		next_fib = fib1 + fib2;
-		printf(",l%d", next_fib);
+		printf(",%ld", next_fib);
 
 		fib1 = fib2;
 		fib2 = next_fib;
