@@ -8,15 +8,16 @@
 
 int main(void)
 {
-	int fib1 = 1, fib2 = 2;
-	int next_fib, i;
+	long fib1 = 1, fib2 = 2;
+	long next_fib;
+	int i;
 
-	printf("%d, %d", fib1, fib2);
+	printf("%ld, %ld", fib1, fib2);
 
 	for (i = 3; i <= 98; i++)
 	{
 		next_fib = fib1 + fib2;
-		printf(", %d", next_fib);
+		printf(",l%d", next_fib);
 
 		fib1 = fib2;
 		fib2 = next_fib;
