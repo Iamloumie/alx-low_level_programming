@@ -9,6 +9,7 @@
 int main(void)
 {
 	int limit = 1024;
+	int i;
 	int sum = 0;
 
 	for (i = 1; i < limit; i++)
