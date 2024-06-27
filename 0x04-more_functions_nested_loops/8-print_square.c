@@ -9,10 +9,9 @@ void print_square(int size)
 {
 	int row, col;
 
-	if (size <= 0)
+	if (size < 1)
 	{
 		_putchar('\n');
-		return;
 	}
 
 	for (row = 0; row < size; row++)
@@ -21,6 +20,6 @@ void print_square(int size)
 		{
 			_putchar('#');
 		}
-	}
 		_putchar('\n');
+	}
 }
