@@ -29,5 +29,9 @@ int main(void)
 	}
 	printf("\n");
 
+	if (a < 100)
+	{
+		printf(" ");
+	}
 	return (0);
 }
