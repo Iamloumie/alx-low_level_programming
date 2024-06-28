@@ -12,6 +12,7 @@ void print_square(int size)
 	if (size < 1)
 	{
 		_putchar('\n');
+		return; // added the return so that if the condition of less than 1 is not met, it should exit the loop without having to run the for
 	}
 
 	for (row = 0; row < size; row++)
