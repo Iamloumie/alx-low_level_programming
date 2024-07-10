@@ -67,7 +67,8 @@ int sqrt_recursion_helper(int n, int start, int end);
 int _sqrt_recursion(int n);
 int is_prime_helper(int n, int divisor);
 int is_prime_number(int n);
-
+int is_palindrome(char *s);
+int check_palindrome(char *s, int start, int end);
 
 
 
