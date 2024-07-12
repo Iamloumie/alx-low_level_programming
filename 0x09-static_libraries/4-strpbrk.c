@@ -1,26 +1,27 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
- * _strpbrk - searches for a string for any set of byte
- * @s: incoming string
- * @accept: incoming compared string
- * Return: return string
- */
+  * _strpbrk - locates the first occurrence in a str
+  * @s: the string to search
+  * @accept: the chars to search
+  * Return: returns the letters and a terminator
+  */
 char *_strpbrk(char *s, char *accept)
 {
-	char *a;
+	int i, j;
 
-	while (*s)
+	/*iterate through the original str*/
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (a = accept; *a; a++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (*s == *a)
+			if (s[i] == accept[j])
 			{
-			return (s);
+				return (s + i);
 			}
 		}
-		s++;
 	}
-	return (NULL);
+
+	/*return the terminator since didnt check that far*/
+	return ('\0');
 }

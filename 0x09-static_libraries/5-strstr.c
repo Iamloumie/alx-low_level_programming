@@ -1,36 +1,15 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
- * _strstr - locates a substring
- * @haystack: incoming mother string
- * @needle: incoming child string
- * Return: returns mother string
+ * _strstr - substring in a str
+ * @haystack: the original str
+ * @needle: the substring
+ * Return: returns the substring
  */
-
 char *_strstr(char *haystack, char *needle)
 {
-	char *h, *n;
+	(void)haystack;
+	(void)needle;
 
-	if (*needle == '\0')
-	{
-		return (haystack);
-	}
-	while (*haystack != '\0')
-	{
-		h = haystack;
-		n = needle;
-
-		while (*n != '\0' && *h == *n)
-		{
-			h++;
-			n++;
-		}
-		if (*n == '\0')
-		{
-			return (haystack);
-		}
-		haystack++;
-	}
-	return (NULL);
+	return (needle);
 }
