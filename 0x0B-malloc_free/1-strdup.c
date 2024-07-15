@@ -28,6 +28,11 @@ char *_strdup(char *str)
 	}
 
 	new_array = malloc(sizeof(char) * (size + 1));
+
+	if (new_array == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < size; i++)
 	{
 		new_array[i] = str[i];
