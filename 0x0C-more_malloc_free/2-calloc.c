@@ -11,7 +11,8 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *new_array, total_size;
+	unsigned int total_size;
+	void *new_array;
 
 	if (nmemb == 0 || size ==  0)
 		return (NULL);
@@ -27,6 +28,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	memset(new_array, 0, total_size);
-	
 	return (new_array);
 }
