@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,9 +14,9 @@ void print_error_and_exit(void);
  * @argv: the argument vector
  * Return: return 0, always successful
  */
-int main(argc, *argv)
+int main(int argc, char *argv[])
 {
-	if (argc != 3 || !is_valid_number(argv[1]) || !is_valid_number(argv[2]) ||)
+	if (argc != 3 || !is_valid_number(argv[1]) || !is_valid_number(argv[2]))
 	{
 		print_error_and_exit();
 	}
@@ -34,10 +35,8 @@ void multiply(char *num1, char *num2)
 {
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
-	int result[len1 + len2];
+	int *result = calloc(len1 + len2, sizeof(int));
 	int i, j, carry, sum;
-
-	memset(result, 0, sizeof(result));
 
 	/**
 	 * This is the heart of the multiplication.
@@ -73,12 +72,13 @@ void multiply(char *num1, char *num2)
 
 int is_valid_number(char *num)
 {
-	while (*num++)
+	while (*num)
 	{
-		if (!isdigit(*num++))
+		if (!isdigit(*num))
 		{
 			return (0);
 		}
+		num++;
 	}
 	return (1);
 }
