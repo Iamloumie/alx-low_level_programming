@@ -36,7 +36,8 @@ void multiply(char *num1, char *num2)
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
 	int *result = calloc(len1 + len2, sizeof(int));
-	int i, j, carry, sum;
+	int i, j;
+	long int sum, carry;
 
 	/**
 	 * This is the heart of the multiplication.
@@ -60,9 +61,11 @@ void multiply(char *num1, char *num2)
 		i++;
 	while (i < len1 + len2)
 	{
-		printf("%d", result[i++]);
+		_putchar(result[i] + '0');
+		i++;
 	}
-	printf("\n");
+	_putchar('\n');
+	free(result);
 }
 /**
  * is_valid_number - checks for a valid number
@@ -87,6 +90,12 @@ int is_valid_number(char *num)
  */
 void print_error_and_exit(void)
 {
-	printf("Error\n");
+	char *error_msg = "Error\n";
+
+	while (*error_msg)
+	{
+		_putchar(*error_msg);
+		error_msg++;
+	}
 	exit(98);
 }
