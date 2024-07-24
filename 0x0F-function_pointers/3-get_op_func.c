@@ -21,7 +21,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 
 	int i = 0;
-	
+
 	/*compares the operator string not just the first character*/
 	while (ops[i].op != NULL)
 	{
