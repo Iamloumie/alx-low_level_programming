@@ -1,26 +1,23 @@
 	global  main
-    extern  printf
+	extern  printf
 
-    section .text
+	section .text
 main:
-    /* Preparing the stack frame */
+    ; Set up stack frame
     push    rbp
     mov     rbp, rsp
 
-    /* Call printf */
-    lea     rdi, [rel message]
+    ; Call printf
+    mov     rdi, format
     xor     eax, eax
     call    printf
 
-    /* Clean up the stack frame */
-    mov     rsp, rbp
+    ; Clean up stack frame
     pop     rbp
 
-    /* Return from main */
+    ; Return 0
     xor     eax, eax
     ret
 
     section .data
-	// 10 is the ASCII code for newline, 0 is the null terminator
-message:
-	db      "Hello, Holberton", 10, 0
+format: db "Hello, Holberton", 10, 0
