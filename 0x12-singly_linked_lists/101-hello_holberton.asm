@@ -1,6 +1,4 @@
-/* 64-bit assembly program to print "Hello, Holberton */
-
-    global  main
+	global  main
     extern  printf
 
     section .text
@@ -10,8 +8,8 @@ main:
     mov     rbp, rsp
 
     /* Call printf */
-    lea     rdi, [rel message]  // Load effective address of message into rdi (1st argument)
-    xor     eax, eax            // Clear eax register (no floating point arguments)
+    lea     rdi, [rel message]
+    xor     eax, eax
     call    printf
 
     /* Clean up the stack frame */
@@ -19,9 +17,10 @@ main:
     pop     rbp
 
     /* Return from main */
-    xor     eax, eax            // Return 0
+    xor     eax, eax
     ret
 
     section .data
+	// 10 is the ASCII code for newline, 0 is the null terminator
 message:
-    db      "Hello, Holberton", 10, 0   // 10 is the ASCII code for newline, 0 is the null terminator
+	db      "Hello, Holberton", 10, 0
