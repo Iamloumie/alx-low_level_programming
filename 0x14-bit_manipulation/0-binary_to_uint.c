@@ -8,14 +8,17 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i = strlen(b) - 1;
+	int i, len;
 	unsigned int decimal = 1, total = 0;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-	for (; i >= 0; i--)
+
+	len = strlen(b);
+
+	for (i = len - 1; i >= 0; i--)
 	{
 		if (b[i] != '1' && b[i] != '0')
 		{
@@ -25,7 +28,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			total += decimal;
 		}
-		decimal = decimal * 2;
+		decimal *= 2;
 	}
 	return (total);
 }
