@@ -1,26 +1,56 @@
-#include "main.h"
+#include "mathop.h"
 
-int addition(int a, int b)
+/**
+ * add - add two numbers
+ * @a: first incoming integer
+ * @b: second incoming integer
+ * Return: added numbers
+ */
+int add(int a, int b)
 {
 	return (a + b);
 }
 
-int subtract(int a, int b)
+/**
+ * sub - sub two numbers
+ * @a: first incoming integer
+ * @b: second incoming integer
+ * Return: result
+ */
+int sub(int a, int b)
 {
 	return (a - b);
 }
 
-int multi(int a, int b)
+/**
+ * mul - multiplies two numbers
+ * @a: first incoming integer
+ * @b: second incoming integer
+ * Return: result
+ */
+int mul(int a, int b)
 {
 	return (a * b);
 }
 
-int divide(int a, int b)
+/**
+ * divi - divides two numbers
+ * @a: first incoming integer
+ * @b: second incoming integer
+ * Return: result
+ */
+int divi(int a, int b)
 {
 	return (a / b);
 }
 
-int modulo(int a, int b)
+/**
+ * mod - the remainder of two division operation
+ * @a: first incoming integer
+ * @b: second incoming integer
+ * Return: result
+ */
+int mod(int a, int b)
 {
 	return (a % b);
 }

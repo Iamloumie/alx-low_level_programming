@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdlib.h>
+#include <stdio.h>
 
 int _putchar(char c);
 int _islower(int c);
@@ -24,10 +25,10 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
 
-int addition(int a, int b);
-int subtract(int a, int b);
-int multi(int a, int b);
-int divide(int a, int b);
-int modulo(int a, int b);
+int add(int a, int b);
+int sub(int a, int b);
+int mul(int a, int b);
+int div(int a, int b);
+int mod(int a, int b);
 
 #endif
