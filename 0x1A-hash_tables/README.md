@@ -1,10 +1,10 @@
-# Hash Table Implementation
+# Hash Table Implementation in C
 
-This project implements a hash table data structure in C.
-It includes basic operations like creation, insertion, retrieval, printing, and deletion of key-value pairs,
-as well as an advanced sorted hash table implementation.
+This project implements a hash table data structure in C, along with various operations and utility functions.
 
 ## Files
+
+### Main Implementation
 
 - `0-hash_table_create.c`: Creates a hash table
 - `1-djb2.c`: Implements the djb2 hash function
@@ -13,8 +13,24 @@ as well as an advanced sorted hash table implementation.
 - `4-hash_table_get.c`: Retrieves a value associated with a key
 - `5-hash_table_print.c`: Prints the hash table
 - `6-hash_table_delete.c`: Deletes a hash table
+
+### Additional Implementation
+
 - `100-sorted_hash_table.c`: Implements a sorted hash table
-- `hash_tables.h`: Header file containing function prototypes and data structures
+
+### Header File
+
+- `hash_tables.h`: Contains all function prototypes and structure definitions
+
+### Test Files
+
+- `0-main.c` to `6-main.c`: Test files for each main implementation file
+- `100-main.c`: Test file for the sorted hash table implementation
+
+### Other Files
+
+- `a`, `b`, `c`, `d`, `e`, `f`, `g`: Purpose unknown, possibly additional test or data files
+- `sht`: Purpose unknown, possibly related to "sorted hash table"
 
 ## Compilation
 
@@ -26,22 +42,12 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hash_table
 
 ## Usage
 
-Include `hash_tables.h` in your C file and link with the compiled object files.
+After compilation, run the resulting executable:
 
-Example:
-
-```c
-#include "hash_tables.h"
-
-int main(void)
-{
-    hash_table_t *ht;
-
-    ht = hash_table_create(1024);
-    hash_table_set(ht, "key", "value");
-    printf("%s\n", hash_table_get(ht, "key"));
-    hash_table_delete(ht);
-
-    return (0);
-}
 ```
+./hash_table
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
