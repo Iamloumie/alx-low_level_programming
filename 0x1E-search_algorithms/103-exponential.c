@@ -6,6 +6,7 @@
  * @array: array being searched
  * @left: starting index
  * @right: ending index
+ * Return: void
  */
 
 void print_array(int *array, size_t left, size_t right)
@@ -63,8 +64,12 @@ int exponential_search(int *array, size_t size, int value)
 	size_t bound = 1;
 	size_t right;
 
-	if (!array || size == 0)
+	if (array == NULL || size == 0)
 		return (-1);
+
+	/* Check first element*/
+	if (array[0] == value)
+		return (0);
 
 	/* Find the range for binary search */
 	while (bound < size && array[bound] < value)
@@ -74,7 +79,7 @@ int exponential_search(int *array, size_t size, int value)
 	}
 
 	/* Calculate the right boundary for the search */
-	right = (bound < size - 1) ? bound : size - 1;
+	right = (bound < size) ? bound : size - 1;
 
 	/* Print the range message */
 	printf("Value found between indexes [%lu] and [%lu]\n", bound / 2, right);
